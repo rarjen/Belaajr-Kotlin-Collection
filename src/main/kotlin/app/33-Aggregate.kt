@@ -28,4 +28,33 @@ fun main() {
     println(list.average()); //5.5
     println(list.sum()); //55
     println(list.count()); //10
+
+    println(list.sumOf { it / 2 }); //25
+
+    println(list.sumOf { value ->
+        var total = 0;
+        if (value % 2 == 0 ) {
+            total += value / 2;
+        } else if (value % 2 == 1) {
+            total += value
+        }
+        total
+    })
+
+//    println(list.sumOf { value ->
+//        var total = 0;
+//        if (value % 2 == 0){
+//            total += value / 2;
+//        }
+//        total
+//    })
+//
+//    println(list.sumOf { value ->
+//        var total = 0;
+//        if (value % 2 == 1 ){
+//            total += value;
+//        }
+//        total
+//    })
+
 }
